@@ -1,0 +1,35 @@
+<head>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      text-align: center;
+    }
+  </style>
+</head>
+
+<div class="gradeResultsTable">
+  <h1 class="title">Grade Results DB</h1>
+  <table style="width:100%;">
+    <tr>
+      <th>HW1</th>
+      <th>HW2</th>
+      <th>HW3</th>
+      <th>Exam1</th>
+      <th>Exam2</th>
+      <th>Final Grade</th>
+      <th>Letter Grade</th>
+    </tr>
+    <p id="demo"></p>
+  <% grades.forEach(testCase => { %>
+    <tr>
+      <td><%= testCase.hw1 %></td>
+      <td><%= testCase.hw2 %></td>
+      <td><%= testCase.hw3 %></td>
+      <td><%= testCase.exam1 %></td>
+      <td><%= testCase.exam2 %></td>
+      <td><%= testCase.finalGrade %></td>
+      <td><%= testCase.letterGrade %></td>
+    </tr>
+    <% }); %>
+     </table>
+</div>
