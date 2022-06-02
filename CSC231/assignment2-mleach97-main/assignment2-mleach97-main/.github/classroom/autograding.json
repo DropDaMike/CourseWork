@@ -1,0 +1,34 @@
+{
+  "tests": [
+    {
+      "name": "Compile",
+      "setup": "",
+      "run": "make test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    },
+    {
+      "name": "test1",
+      "setup": "",
+      "run": "./a.out < file.txt",
+      "input": "",
+      "output": "55\r\n3628800",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 3
+    },
+    {
+      "name": "Clean",
+      "setup": "",
+      "run": "make clean",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 1
+    }
+  ]
+}
