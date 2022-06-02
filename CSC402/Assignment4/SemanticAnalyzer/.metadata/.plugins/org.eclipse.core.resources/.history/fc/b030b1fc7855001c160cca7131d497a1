@@ -1,0 +1,38 @@
+/**
+ * CSC 402-01 Assignment #4
+ * 
+ * On my honor, Michael E. Leach, this assignment is my own work.  
+ * I, Michael E. Leach, will follow the instructor's rules and processes 
+ * related to academic integrity as directed in the course syllabus.
+ *
+ */
+
+package p.actions;
+
+import java.util.ArrayList;
+
+import org.eclipse.jdt.core.dom.ASTVisitor;
+import org.eclipse.jdt.core.dom.TypeLiteral;
+import org.eclipse.jdt.core.dom.MethodDeclaration;
+import org.eclipse.jdt.core.dom.MethodInvocation;
+import org.eclipse.jdt.core.dom.TypeDeclaration;
+
+public class ASTVisitorEx extends ASTVisitor {
+	public ArrayList<String> list = new ArrayList<>();
+	String s;
+
+	//ok so before we figure this out we need to get a way to pick out the highest parent class from the program
+	//from the leaf nodes. 
+	//watch the video
+	public boolean visit(TypeDeclaration node) {
+		//l.add(node.getName().getIdentifier() + node.resolveBinding().getSuperclass().getName());
+		System.out.println("TD: The parent of " + node.getName().getIdentifier() + 
+			" is " + node.resolveBinding().getSuperclass().getName());
+		s = node.getName().getIdentifier() + node.resolveBinding().getSuperclass().getName();
+		System.out.println(s);
+		list.add(s);
+		
+		return true; 
+	}
+
+}
